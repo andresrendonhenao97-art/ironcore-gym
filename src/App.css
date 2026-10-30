@@ -1,3 +1,4 @@
+/* ===== GENERAL ===== */
 .contenedor-app {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -6,6 +7,7 @@
   color: #e0e0e0;
 }
 
+/* ===== MENÚ ===== */
 .menu-navegacion {
   background-color: #1a1a1a;
   color: #ffffff;
@@ -14,6 +16,9 @@
   align-items: center;
   padding: 15px 50px;
   border-bottom: 2px solid #e63946;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
@@ -32,16 +37,18 @@
   padding: 0;
 }
 
-.menu-navegacion li {
-  cursor: pointer;
+.menu-navegacion a {
+  color: #ffffff;
+  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
 
-.menu-navegacion li:hover {
+.menu-navegacion a:hover {
   color: #e63946;
 }
 
+/* ===== SECCIÓN PRINCIPAL ===== */
 .seccion-principal {
   padding: 60px 20px;
   background-color: #0d0d0d;
@@ -99,15 +106,219 @@
   border: 1px solid #e63946;
 }
 
+/* ===== SOBRE NOSOTROS ===== */
+.seccion-nosotros {
+  padding: 80px 40px;
+  background-color: #141414;
+}
+
+.seccion-nosotros h2 {
+  font-size: 2.2rem;
+  color: #e63946;
+  margin-bottom: 40px;
+}
+
+.nosotros-contenido {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.imagen-nosotros {
+  width: 420px;
+  border-radius: 12px;
+  border: 2px solid #2c2c2c;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.texto-nosotros h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.texto-nosotros p {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.lista-valores {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.lista-valores li {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* ===== CLASES ===== */
+.seccion-clases {
+  padding: 80px 40px;
+  background-color: #0d0d0d;
+}
+
+.seccion-clases h2 {
+  font-size: 2.2rem;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.subtitulo-clases {
+  color: #b0b0b0;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+.grid-clases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarjeta-clase {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2c2c2c;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-clase:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(230, 57, 70, 0.2);
+}
+
+.tarjeta-clase img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta-clase h3 {
+  color: #e63946;
+  margin: 15px 15px 8px;
+}
+
+.tarjeta-clase p {
+  color: #b0b0b0;
+  padding: 0 15px 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== CONTACTO ===== */
+.seccion-contacto {
+  padding: 80px 40px;
+  background-color: #141414;
+}
+
+.seccion-contacto h2 {
+  font-size: 2.2rem;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.subtitulo-contacto {
+  color: #b0b0b0;
+  margin-bottom: 50px;
+}
+
+.contacto-grid {
+  display: flex;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info-contacto h3 {
+  color: #e63946;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+.info-contacto p {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.formulario-contacto {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #2c2c2c;
+  min-width: 320px;
+}
+
+.formulario-contacto h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: #e63946;
+}
+
+/* ===== FOOTER ===== */
 .pie-pagina {
   background-color: #1a1a1a;
   color: #b0b0b0;
   padding: 25px;
-  margin-top: 50px;
+  margin-top: 0;
   border-top: 2px solid #e63946;
 }
 
 .pie-pagina p {
   margin: 8px 0;
   font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .menu-navegacion {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .nosotros-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagen-nosotros {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .contacto-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }

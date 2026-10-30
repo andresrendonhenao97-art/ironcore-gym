@@ -6,10 +6,10 @@ function Menu() {
     <nav className="menu-navegacion">
       <h2 className="logo">IronCore Gym</h2>
       <ul>
-        <li>Inicio</li>
-        <li>Sobre Nosotros</li>
-        <li>Clases</li>
-        <li>Contacto</li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Sobre Nosotros</a></li>
+        <li><a href="#clases">Clases</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   );
